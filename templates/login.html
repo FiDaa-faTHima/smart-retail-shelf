@@ -1,0 +1,367 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Retail Shelf Monitoring System</title>
+    <style>
+      :root {
+    --primary-violet: #6c5ce7;
+    --text-color: #333;
+    --shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* THE BLURRED BACKGROUND LAYER */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    /* Replace with your local shelf image or use this professional retail one */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur strength here */
+    z-index: -1; /* Keeps it behind everything */
+    transform: scale(1.1); /* Prevents white edges from the blur */
+}
+
+/* BRANDING OUTSIDE THE BOX */
+.brand-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.brand-header img {
+    width: 90px;       /* Increase this value to make it larger (e.g., from 80px to 150px) */
+    height: auto;        /* Keeps the aspect ratio perfect so the image doesn't stretch */
+    margin-bottom: 5px; /* Adds a bit more space below the larger logo */
+    
+    /* Optional: If your logo is very detailed, you can add this for clarity */
+    image-rendering: -webkit-optimize-contrast; 
+
+     /* width: 70px; /* Adjust size of your logo */
+    /* margin-bottom: 5px;*/ 
+}
+
+.brand-header h1 {
+    margin-top: -10px;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* THE LOGIN BOX */
+.login-container {
+    background: rgba(255, 255, 255, 0.92); /* Soft white with slight transparency */
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    z-index: 1;
+}
+
+.card-heading {
+    background: #eeeeee;
+    padding: 8px;
+    font-weight: bold;
+    color: #444;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Input Styling */
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-violet);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+    </style>
+</head>
+<body>
+
+<body>
+
+ <body>
+
+    <div class="brand-header">
+        <img src="{{ url_for('static', filename='logo smart.png') }}" alt="Smart Retail Logo">
+        <h1>Smart Retail</h1>
+        <div style="font-size: 0.9rem; opacity: 0.9;">Shelf Monitoring System</div>
+    </div>
+
+    <div class="login-container">
+        <div class="card-heading">User Login</div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 1.5rem;">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#" style="color: var(--primary-blue); text-decoration: none;">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <p style="font-size: 0.85rem; margin-top: 1.5rem;">
+            Don't have an account? <a href="{{ url_for('register') }}" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">Register</a>
+        </p>
+    </div>
+
+
+</body>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Retail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-violet: #6c5ce7;
+            --text-dark: #333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("{{ url_for('static', filename='retail_bg.jpeg') }}");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1;
+            transform: scale(1.1);
+        }
+
+        .brand-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            z-index: 1;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .brand-header img {
+            width: 90px;
+            margin-bottom: 5px;
+        }
+
+        .brand-header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+
+        /* Unified Card Class name and Width */
+        .auth-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .module-header {
+            background-color: #f1f1f1;
+            border: 1px solid #d9d9d9;
+            padding: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #555;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 0.85rem;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary-violet);
+        }
+
+        .btn-auth {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-violet);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-auth:hover {
+            background-color: #5849d4;
+        }
+
+        .switch-link {
+            font-size: 0.85rem;
+            margin-top: 15px;
+            color: #666;
+        }
+
+        .switch-link a {
+            color: var(--primary-violet);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="brand-header">
+        <img src="{{ url_for('static', filename='logo smart.png') }}" alt="Logo">
+        <h1>Smart Retail</h1>
+        <div style="opacity: 0.9; font-size: 0.9rem;">Shelf Monitoring System</div>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div id="flash-popup" style="
+        position: fixed; top: 20px; background: #6c5ce7; color: white; 
+        padding: 15px 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 9999; font-weight: bold;">
+        {{ message }}
+    </div>
+    <script>
+        setTimeout(function () {
+            document.getElementById('flash-popup').style.display = 'none';
+        }, 3000); // Disappears after 3 seconds
+    </script>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="auth-card">
+        <div class="module-header">User Login</div>
+
+        <form id="loginForm" action="{{ url_for('login') }}" method="POST">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+               <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 1.5rem;">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#" style="color: var(--primary-violet); text-decoration: none;">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-auth">Login</button>
+        </form>
+
+        <div class="switch-link">
+            Don't have an account? <a href="{{ url_for('register') }}">Register</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
