@@ -74,47 +74,6 @@ smart-retail-shelf/
 ```
 
 ---
-## Screenshots
-
-### Login Page
-
-![Login Page](screenshots/login.png)
-
----
-
-### Registration Page
-
-![Registration Page](screenshots/register.png)
-
----
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-### Live Shelf Monitoring
-
-![Live Monitoring](screenshots/live-monitoring.png)
-
----
-
-### Inventory Dashboard
-
-![Inventory Dashboard](screenshots/inventory.png)
-
----
-
-### Alert Detection
-
-![Alert Detection](screenshots/alerts.png)
-
----
-
-### Shelf Details
-
-![Shelf Details](screenshots/shelf-details.png)
 
 ## Installation
 
@@ -207,14 +166,48 @@ models/best.pt
 
 ## Screenshots
 
-Add screenshots of:
 
-- Login Page
-- Dashboard
-- Live Camera
-- Shelf Details
-- Detection Alerts
-- Inventory Dashboard
+### Login Page
+![Login Page](screenshots/login.jpeg)
+
+### Registration Page
+![Registration Page](screenshots/register.jpeg)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.jpeg)
+
+### Active Dashboard
+![Active Dashboard](screenshots/active_dashboard.jpeg)
+
+### Admin Panel
+![Admin Panel](screenshots/admin_panel.jpeg)
+
+### Camera Access
+![Camera Access](screenshots/camera_access.jpeg)
+
+### Camera Initialization
+![Camera Initialization](screenshots/camera_inirialization.jpeg)
+
+### Camera ON
+![Camera ON](screenshots/camera_on.jpeg)
+
+### Alerts Monitoring
+![Alerts Monitoring](screenshots/alerts_monitoring.jpeg)
+
+### Normal Shelf Alert
+![Normal Shelf Alert](screenshots/normal_shelf_alert.jpeg)
+
+### Stockout Alert
+![Stockout Alert](screenshots/stockout_alert.jpeg)
+
+### Detection History
+![Detection History](screenshots/detection_history.jpeg)
+
+### Empty Detection Log
+![Empty Detection Log](screenshots/empty_detection_log.jpeg)
+
+### System Settings
+![System Settings](screenshots/system_settings.jpeg)
 
 ---
 
@@ -259,7 +252,7 @@ retail.db
 
 ## Author
 
-* Fida Fathima*
+ Fida Fathima
 
 GitHub: https://github.com/FiDaa-faTHima
 --
