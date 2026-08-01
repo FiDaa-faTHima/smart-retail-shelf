@@ -27,7 +27,7 @@ app = Flask(__name__)
 app.secret_key = "smart_retail_secret_key" # Required for popups (flashing)
 # This is the "Professional" way (works on Windows, Mac, and Linux)
 
-model = YOLO(r"models\best.pt")
+model = YOLO("models/best.pt")
 
 # This prints the dictionary of names stored inside the file
 # print(model.names)
