@@ -1,6 +1,6 @@
 # Smart Retail Shelf Monitoring System
 
-An AI-powered Smart Retail Shelf Monitoring System that automates shelf inventory monitoring using YOLO Object Detection, Computer Vision, Flask, and OpenCV. The system continuously monitors retail shelves, detects low-stock and displaced products, and provides a real-time dashboard for inventory management.
+An AI-powered Smart Retail Shelf Monitoring System that automates shelf inventory monitoring using YOLO Object Detection, Computer Vision, Flask, and OpenCV. The system continuously monitors retail shelves, detects low-stock, empty shelves and displaced products, and provides a real-time dashboard for inventory management.
 
 ---
 
@@ -74,6 +74,47 @@ smart-retail-shelf/
 ```
 
 ---
+## Screenshots
+
+### Login Page
+
+![Login Page](screenshots/login.png)
+
+---
+
+### Registration Page
+
+![Registration Page](screenshots/register.png)
+
+---
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Live Shelf Monitoring
+
+![Live Monitoring](screenshots/live-monitoring.png)
+
+---
+
+### Inventory Dashboard
+
+![Inventory Dashboard](screenshots/inventory.png)
+
+---
+
+### Alert Detection
+
+![Alert Detection](screenshots/alerts.png)
+
+---
+
+### Shelf Details
+
+![Shelf Details](screenshots/shelf-details.png)
 
 ## Installation
 
@@ -218,12 +259,7 @@ retail.db
 
 ## Author
 
-** Fida Fathima**
+* Fida Fathima*
 
 GitHub: https://github.com/FiDaa-faTHima
-
----
-
-## License
-
-This project is developed for educational and research purposes.
+--
